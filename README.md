@@ -74,6 +74,7 @@ seoul-crime-analysis/
 │   ├── CrimeDataMerger.py
 │   ├── CrimeDataAnalyzer.py
 │   └── CrimeDataVisualizer.py
+├── .gitignore
 ├── environment.yml
 ├── README.md
 ├── LICENSE
