@@ -1,0 +1,12 @@
+name: seoul-crime-analysis
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - folium
+  - pytest
+  - flake8
