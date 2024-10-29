@@ -1,0 +1,42 @@
+name: Python Package using Conda
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        python-version: 3.9
+        auto-activate-base: false
+
+    - name: Create Conda Environment
+      run: |
+        conda env create -f environment.yml
+
+    - name: List Conda Environments
+      run: |
+        conda info --envs
+
+    - name: Install fonts for Korean
+      run: |
+        sudo apt-get install -y fonts-nanum
+        sudo fc-cache -fv
+
+    - name: Lint with flake8
+      run: |
+        source $(conda info --base)/etc/profile.d/conda.sh
+        conda activate seoul-crime-analysis
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Run tests
+      run: |
+        source $(conda info --base)/etc/profile.d/conda.sh
+        conda activate seoul-crime-analysis
+        pytest
