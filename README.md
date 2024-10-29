@@ -1,7 +1,8 @@
 # 🕵️‍♂️ 서울시 범죄 분석 프로젝트 (Seoul Crime Analysis)
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue) <br/>
-![License](https://img.shields.io/badge/License-MIT-green) <br/><br/>
+![License](https://img.shields.io/badge/License-MIT-green) <br/>
+[![Python Package using Conda](https://github.com/team-no-1/seoul-crime-analysis/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/team-no-1/seoul-crime-analysis/actions/workflows/python-package-conda.yml)<br/><br/>
 
 ## 📋 목차
 - [소개](#-소개)
