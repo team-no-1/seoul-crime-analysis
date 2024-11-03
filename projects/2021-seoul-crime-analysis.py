@@ -156,7 +156,7 @@ class CrimeDataAnalyzer :
         plt.figure(figsize = (10, 10))
         sns.heatmap(self.crime_ratio.sort_values(by='전체발생비율', ascending=False), annot=True, fmt='f', linewidths=.5, cmap='Reds')
         print(plt.title('범죄 발생(전체발생비율로 정렬) - 각 항목을 정규화한 후 인구로 나눔'))
-        print(plt.show())
+        plt.show()
 
     def create_folium_map(self) :
         """Folium을 사용하여 범죄 데이터를 지도에 시각화합니다."""
